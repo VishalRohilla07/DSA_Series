@@ -13,6 +13,7 @@ void permute(vector<int> &a, int idx){
     permute(a,idx+1);
     swap(a[i],a[idx]);
   }
+  return;
 }
 
 int32_t main(){
@@ -20,7 +21,10 @@ int32_t main(){
   vector<int> a(n);
   for(auto &i : a)
     cin>>i;
-  permute(a,0);
+  sort(a.begin(),a.end());
+  do{
+    ans.push_back(a);
+  }while(next_permutation(a.begin(),a.end()));
   for(auto v : ans){
     for(auto i: v)
       cout<<i<<" ";
