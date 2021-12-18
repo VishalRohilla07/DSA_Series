@@ -6,6 +6,7 @@ int getBit(int n, int pos){
 }
 
 
+
 int main(){
 
   cout<< getBit(5,2) <<endl;
